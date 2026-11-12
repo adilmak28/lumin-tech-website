@@ -1,6 +1,10 @@
 import { MotionConfig } from 'framer-motion'
 import { useState } from 'react'
 import CategorySection from './components/CategorySection'
+import ContactSection from './components/ContactSection'
+import Footer from './components/Footer'
+import Gallery from './components/Gallery'
+import Testimonials from './components/Testimonials'
 import FeaturedProducts, { type ProductFilter } from './components/FeaturedProducts'
 import FloatingWhatsAppButton from './components/FloatingWhatsAppButton'
 import Header from './components/Header'
@@ -25,7 +29,11 @@ export default function App() {
         <TrustBand />
         <ServicesSection />
         <FeaturedProducts filter={productFilter} onFilterChange={setProductFilter} />
+        <Gallery />
+        <Testimonials />
+        <ContactSection />
       </main>
+      <Footer />
       <FloatingWhatsAppButton />
     </MotionConfig>
   )
