@@ -65,16 +65,15 @@ export const SERVICES: Service[] = [
   {
     icon: Wrench,
     title: 'Home & Office Installation',
-    description:
-      'Complete installation for homes, offices and shops by our Islamabad-based team.',
-    whatsappMessage: "Hi, I need lighting installation for my home/office in Islamabad.",
+    description: 'Complete installation for homes, offices and shops by our Islamabad-based team.',
+    whatsappMessage: 'Hi, I need lighting installation for my home/office in Islamabad.',
   },
   {
     icon: Hammer,
     title: 'Chandelier & Fitting Services',
     description:
       'Safe assembly and hanging of heavy chandeliers, fancy lights and outdoor fittings.',
-    whatsappMessage: "Hi, I need a chandelier / light fitting service.",
+    whatsappMessage: 'Hi, I need a chandelier / light fitting service.',
   },
   {
     icon: MessageCircle,

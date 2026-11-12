@@ -1,5 +1,5 @@
 import { MotionConfig } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CategorySection from './components/CategorySection'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
@@ -14,6 +14,17 @@ import TrustBand from './components/TrustBand'
 
 export default function App() {
   const [productFilter, setProductFilter] = useState<ProductFilter>('all')
+
+  // Sections are rendered by React, so the browser can't jump to a shared link
+  // like "/#contact" on first load — do it once the page has mounted.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    if (!id) return
+    const frame = requestAnimationFrame(() =>
+      document.getElementById(id)?.scrollIntoView({ behavior: 'instant' }),
+    )
+    return () => cancelAnimationFrame(frame)
+  }, [])
 
   const showCategory = (filter: ProductFilter) => {
     setProductFilter(filter)

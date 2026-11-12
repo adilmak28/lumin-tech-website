@@ -49,7 +49,11 @@ export default function Gallery() {
                 <SmartImage
                   image={item.image}
                   widths={[320, 480, 800]}
-                  sizes={item.span === 'large' ? '(min-width: 768px) 50vw, 100vw' : '(min-width: 768px) 25vw, 50vw'}
+                  sizes={
+                    item.span === 'large'
+                      ? '(min-width: 768px) 50vw, 100vw'
+                      : '(min-width: 768px) 25vw, 50vw'
+                  }
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />
                 <span className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/10 to-transparent opacity-80 transition group-hover:opacity-100" />
@@ -74,7 +78,12 @@ export default function Gallery() {
 
       <AnimatePresence>
         {index !== null && (
-          <Lightbox item={GALLERY[index]} onClose={close} onPrev={() => step(-1)} onNext={() => step(1)} />
+          <Lightbox
+            item={GALLERY[index]}
+            onClose={close}
+            onPrev={() => step(-1)}
+            onNext={() => step(1)}
+          />
         )}
       </AnimatePresence>
     </section>

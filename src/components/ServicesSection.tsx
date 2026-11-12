@@ -78,8 +78,8 @@ export default function ServicesSection() {
                 Street lighting for your entire project — at import rates
               </h3>
               <p className="mt-3 text-slate-300">
-                Share your road length or BOQ and get a complete quote for poles, LED/solar fixtures,
-                cabling and installation.
+                Share your road length or BOQ and get a complete quote for poles, LED/solar
+                fixtures, cabling and installation.
               </p>
             </div>
             <WhatsAppButton

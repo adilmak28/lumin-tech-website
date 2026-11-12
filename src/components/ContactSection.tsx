@@ -92,7 +92,7 @@ function LocationBlock() {
                 </li>
               ))}
             </ul>
-            <div className="mt-auto flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+            <div className="mt-auto flex flex-col gap-3 sm:flex-row lg:flex-col">
               <WhatsAppButton
                 className="flex-1"
                 message="Hi, I'd like directions to your shop in Islamabad."
@@ -111,7 +111,10 @@ function LocationBlock() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.1} className="overflow-hidden rounded-2xl border border-white/5 lg:col-span-3">
+          <Reveal
+            delay={0.1}
+            className="overflow-hidden rounded-2xl border border-white/5 lg:col-span-3"
+          >
             <iframe
               title="LUMIN-TECH location on Google Maps"
               src={SITE.mapEmbedUrl}
@@ -209,7 +212,14 @@ function ContactBlock() {
           >
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Your name" htmlFor="name">
-                <input id="name" name="name" required autoComplete="name" placeholder="Full name" className={inputClass} />
+                <input
+                  id="name"
+                  name="name"
+                  required
+                  autoComplete="name"
+                  placeholder="Full name"
+                  className={inputClass}
+                />
               </Field>
               <Field label="Phone / WhatsApp" htmlFor="phone">
                 <input
@@ -227,7 +237,13 @@ function ContactBlock() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Interested in" htmlFor="interest">
-                <select id="interest" name="interest" required defaultValue="" className={inputClass}>
+                <select
+                  id="interest"
+                  name="interest"
+                  required
+                  defaultValue=""
+                  className={inputClass}
+                >
                   <option value="" disabled>
                     Select a category
                   </option>
@@ -239,7 +255,13 @@ function ContactBlock() {
                 </select>
               </Field>
               <Field label="City" htmlFor="city">
-                <input id="city" name="city" autoComplete="address-level2" placeholder="Islamabad" className={inputClass} />
+                <input
+                  id="city"
+                  name="city"
+                  autoComplete="address-level2"
+                  placeholder="Islamabad"
+                  className={inputClass}
+                />
               </Field>
             </div>
             <Field label="Message" htmlFor="message">

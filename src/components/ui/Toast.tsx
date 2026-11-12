@@ -17,7 +17,11 @@ export default function Toast({ message, onClose, duration = 6000 }: ToastProps)
   }, [message, onClose, duration])
 
   return (
-    <div aria-live="polite" role="status" className="pointer-events-none fixed inset-x-0 bottom-24 z-[70] flex justify-center px-4">
+    <div
+      aria-live="polite"
+      role="status"
+      className="pointer-events-none fixed inset-x-0 bottom-24 z-[70] flex justify-center px-4"
+    >
       <AnimatePresence>
         {message && (
           <motion.div

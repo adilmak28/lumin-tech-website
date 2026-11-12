@@ -75,7 +75,10 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.p {...fadeUp(0.45)} className="mt-12 border-t border-white/10 pt-7 text-xs font-semibold tracking-[0.2em] text-slate-500 uppercase">
+          <motion.p
+            {...fadeUp(0.45)}
+            className="mt-12 border-t border-white/10 pt-7 text-xs font-semibold tracking-[0.2em] text-slate-500 uppercase"
+          >
             Lighting for
           </motion.p>
           <motion.ul

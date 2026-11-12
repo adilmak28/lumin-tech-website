@@ -12,7 +12,13 @@ interface RevealProps {
 }
 
 /** Subtle fade + slide-up when the element scrolls into view (runs once). */
-export default function Reveal({ children, className, delay = 0, y = 24, as = 'div' }: RevealProps) {
+export default function Reveal({
+  children,
+  className,
+  delay = 0,
+  y = 24,
+  as = 'div',
+}: RevealProps) {
   const Component = motion[as]
   return (
     <Component
